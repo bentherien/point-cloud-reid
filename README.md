@@ -1,4 +1,4 @@
-# Object Re-identification from Point Clouds
+# Object Re-identification from Point Clouds (code and Models coming soon!)
 
 [**website**](https://github.com/bentherien/point-cloud-reid) | [**paper**](https://arxiv.org/abs/2305.10210) | [**dataset**](https://github.com/bentherien/point-cloud-reid)
 
