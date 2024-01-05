@@ -1,0 +1,34 @@
+_base_ = [
+    "./testing_base.py",
+    "../_base_/reidentifiers/reid_pts_dgcnn_point-cat.py",
+    "../_base_/schedules/cyclic_400e_lr1e-5.py",
+]
+
+neptune_tags = ['waymo','only-match','testing','DGCNN','point-cat']
+
+model=dict(
+    eval_only=True,
+    losses_to_use=dict(
+        kl=False,
+        match=True,
+        cls=False,
+        shape=False,
+        fp=False,
+        triplet=False,
+    ),
+    alpha=dict(
+        kl=1,
+        match=1,
+        cls=1,
+        shape=1,
+        fp=1,
+        vis=1,
+        triplet=1,),
+    triplet_loss=dict(margin=10,p=2),
+    triplet_sample_num=32,
+)
+
+
+
+# load_from='pretrained/reid/only-match/pts_dgcnn_r_nus_waymo_400e.pth'
+
