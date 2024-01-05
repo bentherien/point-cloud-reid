@@ -1,4 +1,4 @@
-# Object Re-identification from Point Clouds (code and Models coming soon!)
+# Object Re-identification from Point Clouds
 
 [**website**](https://github.com/bentherien/point-cloud-reid) | [**paper**](https://arxiv.org/abs/2305.10210) | [**dataset**](https://github.com/bentherien/point-cloud-reid)
 
@@ -108,7 +108,8 @@ For simple training of all modes, one can use `launching_training.py`, which is 
 
 Our repository is based on [lamtk](https://github.com/c7huang/lamtk),[bevfusion](https://github.com/mit-han-lab/bevfusion), and [mmdetection3d](https://github.com/open-mmlab/mmdetection3d)
 
-
+## Known issues
+There is an error in the caption of Fig.3 in the published version of the paper. This error is corrected in the Arxiv version.
 
 ## Citing
 If you find our work useful, please consider citing:
