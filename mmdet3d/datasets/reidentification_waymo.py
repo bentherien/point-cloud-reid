@@ -13,8 +13,8 @@ class ReIDDatasetWaymoFP(ReIDDatasetBase):
     def __init__(self,train,*args,**kwargs):
         sp = 'train' if train else 'val'
         self.instance_token_to_id = get_or_create_waymo_dict(f'instance_token_to_id_{sp}.pkl',
-                                                            filepath='data/lstk/sparse/waymo',
-                                                            infos_filepath=f'data/lstk/sparse/waymo/waymo_infos_{sp}_autolab.pkl')
+                                                            filepath='data/lstk',
+                                                            infos_filepath=f'data/lstk/waymo_infos_{sp}_autolab.pkl')
         # print(args,kwargs)
         super().__init__(*args, **kwargs)
         self.obj_tokens = list(self.sparse_loader.obj_id_to_nums.keys())

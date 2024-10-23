@@ -28,13 +28,32 @@ configs = [
     #Scaling  --- NUSCENES
     # ('testing_pts_point-transformer_r_nus_det_500e.py','pts_point-transformer_r_nus_det_1000e.pth','scaling-nuscenes',),
     # ('testing_pts_point-transformer_r_nus_det_500e.py','pts_point-transformer_r_nus_det_2000e.pth','scaling-nuscenes',),
-    ('testing_pts_point-transformer_r_nus_det_500e.py','pts_point-transformer_r_nus_det_4000e.pth','scaling-nuscenes',),
+    # ('testing_pts_point-transformer_r_nus_det_500e.py','pts_point-transformer_r_nus_det_4000e.pth','scaling-nuscenes',),
+
+    #IMAGE REID --- WAYMO
+    # ('testing_rgb_deit-base_pt_waymo_det_200e.py','rgb_deit-base_pt_waymo_det_200e.pth','waymo',),
+    # ('testing_rgb_deit-tiny_pt_waymo_det_200e.py','rgb_deit-tiny_pt_waymo_det_200e.pth','waymo',),
+    # ('testing_rgb_deit-tiny_r_waymo_det_400e.py','rgb_deit-tiny_r_waymo_det_400e.pth','waymo',),
+
+    #POINT REID --- WAYMO
+    ('testing_pts_point-transformer_r_waymo_det_400e.py','pts_point-transformer_r_waymo_det_400e.pth','waymo',),
+    # ('testing_pts_pointnet_r_waymo_det_400e.py','pts_pointnet_r_waymo_det_400e.pth','waymo',),
+    # ('testing_pts_dgcnn_r_waymo_det_400e.py','pts_dgcnn_r_waymo_det_400e.pth','waymo',),
+
+    # Point BASELINE --- WAYMO
+    # ('testing_pts_point-transformer_baseline-stnet_r_waymo_det_400e.py','pts_point-transformer-baseline-stnet_r_waymo_det_400e.pth','even/waymo',),
+
+    # Scaling --- WAYMO
+    # ('testing_pts_point-transformer_r_waymo_det_400e.py','pts_point-transformer_r_waymo_det_3200e.pth','scaling-waymo',),
+    # ('testing_pts_point-transformer_r_waymo_det_400e.py','pts_point-transformer_r_waymo_det_1600e.pth','scaling-waymo',),
+    # ('testing_pts_point-transformer_r_waymo_det_400e.py','pts_point-transformer_r_waymo_det_800e.pth','scaling-waymo',),
+
 
 ]
 
 neptune_prefix = "no_point_filter_"
 
-GPUS = [0]
+GPUS = [0,1,2,3]
 neptune_prefix = None
 prefix =  "CUDA_VISIBLE_DEVICES={} CUDA_LAUNCH_BLOCKING=1 ".format(
         ','.join([str(x) for x in GPUS])
