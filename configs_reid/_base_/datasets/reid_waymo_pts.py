@@ -45,7 +45,7 @@ cls_to_idx_fp = {
 
 
 dataset_root = 'data'
-train_metadata_version = 'waymo-det-pts-train'
+train_metadata_version = 'waymo-det-both-train'
 val_metadata_version = 'waymo-det-both-val'
 data = dict(
     samples_per_gpu=256,
@@ -63,8 +63,8 @@ data = dict(
                verbose=False,
                validation_seed=0,
                sparse_loader=dict(type='ObjectLoaderSparseWaymo',
-                                metadata_path='{}/lstk/sparse-{}/metadata'.format(dataset_root,train_metadata_version),
-                                data_root='{}/lstk/sparse-{}'.format(dataset_root,train_metadata_version),
+                                metadata_path='{}/lstk/updated_sparse-{}/metadata'.format(dataset_root,train_metadata_version),
+                                data_root='{}/lstk/updated_sparse-{}'.format(dataset_root,train_metadata_version),
                                 min_points=2,
                                 tracking_classes=tracking_classes,
                                 load_scene=True,

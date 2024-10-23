@@ -16,7 +16,7 @@ print(time.time()-t1)
 configs = [
 
     #IMAGE REID --- NUSCENES
-    ('reid_nuscenes_image','rgb_deit-base_point-cat_pt_nus_det_4x60_200e.py',66),
+    # ('reid_nuscenes_image','rgb_deit-base_point-cat_pt_nus_det_4x60_200e.py',66),
     # ('reid_nuscenes_image','rgb_deit-tiny_point-cat_pt_nus_det_4x60_200e.py',66),
     # ('reid_nuscenes_image','rgb_deit-tiny_point-cat_r_nus_det_4x60_500e.py',66),
 
@@ -27,6 +27,21 @@ configs = [
 
     # Point BASELINE --- NUSCENES
     # ('reid_nuscenes_pts','pts_point-transformer_baseline-stnet_nus_det_4x256_500e.py',66),
+
+    #IMAGE REID --- WAYMO
+    # ('reid_waymo_image','rgb_deit-tiny_point-cat_r_waymo_det_4x60_400e.py',66),
+    # ('reid_waymo_image','rgb_deit-tiny_point-cat_pt_waymo_det_4x60_200e.py',66),
+    # ('reid_waymo_image','rgb_deit-base_point-cat_pt_waymo_det_4x60_200e.py',66),
+    
+
+    #Point REID --- WAYMO
+    ('reid_waymo_pts','pts_point-transformer_point-cat_waymo_det_4x256_400e.py',66),
+    # ('reid_waymo_pts','pts_dgcnn_point-cat_waymo_det_4x256_400e.py',66),
+    # ('reid_waymo_pts','pts_pointnet_point-cat_waymo_det_4x256_400e.py',66),
+
+    # Point BASELINE --- WAYMO
+    # ('reid_waymo_pts','pts_point-transformer_baseline-stnet_waymo_det_4x256_400e.py',66),
+    
 ]
 
 GPUS = [1]
@@ -43,7 +58,7 @@ for dir_,c,seed in configs:
             dir_ = 'reid_nuscenes_image'
     else:
         if 'waymo' in c:
-            dir_ = 'reid_waymo_pts/num_point_ablation'
+            dir_ = 'reid_waymo_pts'
         elif 'nus' in c:
             dir_ = 'reid_nuscenes_pts'
 

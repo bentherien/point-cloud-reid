@@ -21,13 +21,13 @@ def combine_metadata_fix(metadata_path_sparse):
     sparse_metadata = {x:pkl.load(open(os.path.join(metadata_path_sparse,x),'rb')) \
                                             for x in md_files}
 
-    for x in md_files:
-        temp = [int(y) for y in x[-11:-4].split("-")]
-        if 500 <= temp[0] and temp[1] <= 700:
-            print(x)
-            for k in sparse_metadata[x]['obj_infos']:
-                sparse_metadata[x]['obj_infos'][k]['path'] = Path("../../../new_datasets/lstk/sparse-waymo-det-both-train") \
-                                                             / sparse_metadata[x]['obj_infos'][k]['path']
+    # for x in md_files:
+    #     temp = [int(y) for y in x[-11:-4].split("-")]
+    #     if 500 <= temp[0] and temp[1] <= 700:
+    #         print(x)
+    #         for k in sparse_metadata[x]['obj_infos']:
+    #             sparse_metadata[x]['obj_infos'][k]['path'] = Path("../../../new_datasets/lstk/sparse-waymo-det-both-train") \
+    #                                                          / sparse_metadata[x]['obj_infos'][k]['path']
 
 
     metadata = dict(scene_infos={}, obj_infos={}, frame_infos={})
