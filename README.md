@@ -7,7 +7,21 @@
 
 # Abstract
 Object re-identification (ReID) from images plays a critical role in application domains of image retrieval (surveillance, retail analytics, etc.) and multi-object tracking (autonomous driving, robotics, etc.). However, systems that additionally or exclusively perceive the world from depth sensors are becoming more commonplace without any corresponding methods for object ReID. In this work, we fill the gap by providing the first large-scale study of object ReID from point clouds and establishing its performance relative to image ReID. To enable such a study, we create two large-scale ReID datasets with paired image and LiDAR observations and propose a lightweight matching head that can be concatenated to any set or sequence processing backbone (e.g., PointNet or ViT), creating a family of comparable object ReID networks for both modalities. Run in Siamese style, our proposed point cloud ReID networks can make thousands of pairwise comparisons in real-time ($10$ Hz). Our findings demonstrate that their performance increases with higher sensor resolution and approaches that of image ReID when observations are sufficiently dense. Our strongest network trained at the largest scale achieves ReID accuracy exceeding $90\%$ for rigid objects and $85\%$ for deformable objects (without any explicit skeleton normalization). To our knowledge, we are the first to study object re-identification from real point cloud observations.
+86
 
+# Citation
+If you have found our work useful, please consider citing:
+```BibTeX
+@article{therien2024pcreid,
+  author    = {Therien, Benjamin 
+               and Huang, Chenjie 
+               and Chow, Adrian
+               and Czarnecki, Krzysztof},
+  title     = {Object Re-identification from Point Clouds},
+  journal   = {WACV},
+  year      = {2024},
+}
+```
 
 # Usage
 ## Downloading our nuscenes reid dataset
@@ -135,8 +149,8 @@ Our repository is based on [lamtk](https://github.com/c7huang/lamtk), [bevfusion
 # Known issues
 There is an error in the caption of Fig.3 in the published version of the paper. This error is corrected in the Arxiv version.
 
-# Cite our work
-If you find our work useful, please consider citing:
+# Citation
+If you have found our work useful, please consider citing:
 ```BibTeX
 @article{therien2024pcreid,
   author    = {Therien, Benjamin 
