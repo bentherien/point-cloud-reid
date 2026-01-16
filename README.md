@@ -149,7 +149,6 @@ Our repository is based on [lamtk](https://github.com/c7huang/lamtk), [bevfusion
 # Known issues
 There is an error in the caption of Fig.3 in the published version of the paper. This error is corrected in the Arxiv version.
 
-https://concordia-ca.zoom.us/j/7910151742?pwd=QpzQFwd2kuOkkHSHbGHzzQzE0JQLBq.1
 
 # Citation
 If you have found our work useful, please consider citing:
